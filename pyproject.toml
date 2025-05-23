@@ -26,6 +26,7 @@ dev = [
     "pep8-naming",
     "pre-commit",
     "types-SQLAlchemy",
+    "uv",
 ]
 
 [tool.pyright]
