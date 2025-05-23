@@ -14,7 +14,7 @@ dependencies = [
     "python-dotenv==1.1.0",
     "streamlit==1.45.0",
 ]
-dynamic = ["version"]
+version = "0.0.1"
 
 [project.optional-dependencies]
 dev = [
@@ -42,8 +42,6 @@ follow_untyped_imports = true
 [tool.setuptools]
 package-dir = { "" = "src" }
 
-[tool.setuptools.dynamic]
-version = { attr = "_version.__version__" }
 
 [tool.setuptools.packages.find]
 where = ["src"]
@@ -54,7 +52,9 @@ commit_message = "chore: bump release to {version}\n\n[skip ci] Automatically ge
 logging_use_named_masks = false
 major_on_zero = false
 tag_format = "v{version}"
-version_variables = ["src/_version.py:__version__"]
+version_toml = [
+    "definition.toml:project.release:tf", # Tag format
+]
 
 [tool.semantic_release.branches.main]
 match = "(main|master)"
