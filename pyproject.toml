@@ -9,7 +9,7 @@ authors = [{ name = "Dmitry Volodin", email = "mr.molkree@gmail.com" }]
 requires-python = ">= 3.13"
 dependencies = [
     "numpy==2.2.6",
-    "pandas==2.2.3",
+    "pandas==2.3.0",
     "plotly==6.1.1",
     "python-dotenv==1.1.0",
     "streamlit==1.45.1",
